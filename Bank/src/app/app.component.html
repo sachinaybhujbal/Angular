@@ -1,0 +1,32 @@
+
+<table style="margin-left: auto; margin-right: auto;"><th><h1>Hello Welcome to {{title}}...!!!</h1></th></table>
+
+<div id="MainDiv">
+  <div id="MainDivHeader">Please Enter Your Account Number</div>
+  <div id="MainDivAccNo">
+    <input id="acc_no" type="text" name="acc_no"/>
+    <button (click)="newCustomer()">Display</button>
+  </div>
+  <div id="MainDivMain" *ngIf="acc != undefined">
+      <h4>Hello {{accounts[acc].Name}}</h4>
+
+      <button style="margin: 5px;" (click)="checkBalance()">Check Balance</button>
+      <button style="margin: 5px;" *ngIf="flag == '' || flag == 'b'" (click)="Withdraw()">Withdraw</button>
+      <button style="margin: 5px;" *ngIf="flag == '' || flag == 'b'" (click)="Deposit()">Deposite</button>
+      
+      
+      <div *ngIf="flag == 'b'">
+        <h4>Your Balance is {{accounts[acc].Balance}}</h4>
+      </div>
+
+      <div *ngIf="flag == 'w'">
+        <input id="w_amount" placeholder="Enter amount" type="text" name="w_amount"/>
+        <button (click)="updateBalance()">Withdraw</button>
+      </div>
+      
+      <div *ngIf="flag == 'd'">
+        <input id="d_amount" placeholder="Enter amount" type="text" name="d_amount"/>
+        <button (click)="updateBalance()">Deposite</button>
+      </div>
+  </div>
+</div>
