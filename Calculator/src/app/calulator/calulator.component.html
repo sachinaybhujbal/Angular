@@ -1,0 +1,69 @@
+<div class="main_layout">
+    <div class="sub_main">
+        <div class="cal_screen">
+            <div class="sub_cal_screen">
+                <div *ngIf="!historyFlag">
+                    <table style="width: 98%;">
+                        <tbody style="width: 100%;">
+                            <tr>
+                                <td style="width: 100%;">
+                                    <h1>
+                                        <input class="main_expression" id="expInput-{{expression}}" [(ngModel)]="expression" type="text" readonly>
+                                    </h1>
+                                </td>
+                            </tr>
+                            <tr style="width: 100%;">
+                                <td style="width: 100%;">
+                                    <input [style.color]="finalAns ? 'black' : 'grey'" class="cal_ans" id="ansInput-{{ans}}" [(ngModel)]="ans" type="text" readonly>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="history" *ngIf="historyFlag">
+                    <div *ngFor= "let record of history_table">
+                        <h2>{{record}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cal_buttons">
+            <table style="margin: auto;">
+                <tbody>
+                    <tr>
+                        <td><button class="cal_but" (click)="get_num('7')"><h3>7</h3></button></td>
+                        <td><button class="cal_but" (click)="get_num('8')"><h3>8</h3></button></td>
+                        <td><button class="cal_but" (click)="get_num('9')"><h3>9</h3></button></td>
+                        <td><button class="cal_but" (click)="get_oper('/')"><h3>/</h3></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="cal_but" (click)="get_num('4')"><h3>4</h3></button></td>
+                        <td><button class="cal_but" (click)="get_num('5')"><h3>5</h3></button></td>
+                        <td><button class="cal_but" (click)="get_num('6')"><h3>6</h3></button></td>
+                        <td><button class="cal_but" (click)="get_oper('x')"><h3>x</h3></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="cal_but" (click)="get_num('1')"><h3>1</h3></button></td>
+                        <td><button class="cal_but" (click)="get_num('2')"><h3>2</h3></button></td>
+                        <td><button class="cal_but" (click)="get_num('3')"><h3>3</h3></button></td>
+                        <td><button class="cal_but" (click)="get_oper('-')"><h3>-</h3></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="cal_but" (click)="get_num('0')"><h3>0</h3></button></td>
+                        <td><button class="cal_but" (click)="get_num('.')"><h3>.</h3></button></td>
+                        <td><button class="cal_but" (click)="get_oper('%')"><h3>%</h3></button></td>
+                        <td><button class="cal_but" (click)="get_oper('+')"><h3>+</h3></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="cal_but cal_his" (click)="history()"><h3>H</h3></button></td>
+                        <td><button class="cal_but" (click)="backspace()"><h3><<</h3></button></td>
+                        <td><button class="cal_but cal_can" (click)="screen_clear()"><h3>C</h3></button></td>
+                        <td><button class="cal_but cal_eql" (click)="get_final_ans()"><h3>=</h3></button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+        </div>
+    </div>
+
+</div>

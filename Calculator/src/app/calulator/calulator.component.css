@@ -1,0 +1,105 @@
+
+.main_layout{
+    text-align: center;
+    margin:auto;
+    width: 430px;
+    border: 1px solid white;
+    overflow: visible;
+}
+
+.sub_main{
+    border: 4px solid black;
+    border-radius: 10px;
+    margin: auto;
+    width: 90%;
+    background-color: #cccccc;
+}
+
+.cal_screen{
+    text-align: center;
+    height: 150px;
+    width: 100%;
+    border: #cccccc;
+    margin-top: 4px;
+}
+
+.sub_cal_screen{
+    text-align: center;
+    height: 150px;
+    border-radius: 15px;
+    width: 95%;
+    margin:  auto;
+    border: 5px solid #cccccc;
+    background-color: white;
+}
+
+.cal_buttons{
+    text-align: center;
+    width: 100%;
+}
+
+.cal_but{
+    margin-top: 20px;
+    height: 50px;
+    min-width: 80px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.cal_can{
+    background-color: #ed6b6b;
+}
+
+.cal_his{
+    background-color: #90ed6b;
+}
+
+.cal_eql{
+    background-color: #f5f558;
+}
+
+.main_expression{
+    width : 100%; 
+    font-size: 30px; 
+    text-align: right; 
+    outline: none; 
+    border:white; 
+    overflow: hidden;
+    color: black;
+}
+
+.cal_ans{
+    width : 100%; 
+    font-size: 40px; 
+    text-align: right; 
+    outline: none; 
+    border:white;
+    color: gray;
+}
+
+
+.history{
+    overflow: auto;
+    margin: auto;
+    width: 360px;
+    height: 150px;
+    text-align: right;
+    
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.cal_ans{
+    color : black;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
